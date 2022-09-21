@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\Imc;
+
+Route::get('/imc',[Imc::class,'index']);
+
+Route::get('/imcr',[Imc::class,'resp']);
