@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Imc_c extends Model
-{
+class Imc_c extends Model{
 
     public function calc(){
 
@@ -15,7 +14,20 @@ class Imc_c extends Model
 
         $r = $kg/($h*$h);
 
-        return $r;
+        if($r<18.5){
+            $ty="abaixo";
+        }
+            elseif($r<24.9){
+                $ty="normal";
+            }
+                elseif($r<24.9){
+                    $ty="acima";
+                }
+                    else{
+                        $ty="obeso";
+                    }
+
+        return $r."|".$ty;
 
     }
 

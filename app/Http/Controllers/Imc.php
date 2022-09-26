@@ -19,7 +19,9 @@ class Imc extends Controller
 
         $imc = $x->calc();
 
-        return view('out',['imc'=>$imc]);
+        $dt = explode('|',$imc);
+
+        return view('out',['imc'=>$dt[0],"tipo"=>$dt[1]]);
 
     }
 }

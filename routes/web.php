@@ -18,3 +18,5 @@ use App\Http\Controllers\Imc;
 Route::get('/imc',[Imc::class,'index']);
 
 Route::get('/imcr',[Imc::class,'resp']);
+
+
