@@ -7,7 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{url('/imcr')}}" method="get">
+    <form action="{{url('/out')}}" method="get">
+        <input type="text" name="nome" placeholder="nome" >
+        <input type="text" name="idade" placeholder="idade" >
+        <input type="text" name="hpnoite" placeholder="horas dormidas p/ noite">
         <input type="text" name="altura" placeholder="altura em metros" >
         <input type="text" name="kg" placeholder="kilos">
         <input type="submit" value="enviar">

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Imc_c;
+use App\Models\PessoaCalcs;
 
-class Imc extends Controller
+class PessoaDados extends Controller
 {
     public function index(){
         
@@ -15,9 +15,9 @@ class Imc extends Controller
     }
     public function resp(){
 
-        $x = new Imc_c();
+        $x = new PessoaCalcs();
 
-        $imc = $x->calc();
+        $imc = $x->imc();
 
         $dt = explode('|',$imc);
 

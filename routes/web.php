@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\Imc;
+use App\Http\Controllers\PessoaDados;
 
-Route::get('/imc',[Imc::class,'index']);
+Route::get('/in',[PessoaDados::class,'index']);
 
-Route::get('/imcr',[Imc::class,'resp']);
+Route::get('/out',[PessoaDados::class,'resp']);
 
 
