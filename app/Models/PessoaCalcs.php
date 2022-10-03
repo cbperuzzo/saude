@@ -36,21 +36,40 @@ class PessoaCalcs extends Model{
         $idade = $_GET['idade'];
         $hds = $_GET['hpnoite'];
         
-        if($idade<=1){
+        if($idade<=5){
 
+            $max=14;
+            $min=10;
 
         }
             else if($idade<=10){
 
+                $max=11;
+                $min=9;
 
             }
-                else if($idade<=17){
+                else if($idade<60){
+
+                    $max=9;
+                    $min=8;
 
                 }
-                    else if($idade>60){
+                    else{
+
+                        $max=8;
+                        $min=7;
 
                     }
 
+        $ideal = $min . "-" . $max;
+
+        if($hds<$min){$sono="pouco";}
+
+        else if($hds>$max){$sono="muito";}
+
+        else{$sono="bom";}
+
+        return $ideal ."|" . $sono;
 
     }
 }

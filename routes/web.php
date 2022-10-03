@@ -19,4 +19,12 @@ Route::get('/in',[PessoaDados::class,'index']);
 
 Route::get('/out',[PessoaDados::class,'resp']);
 
+Route::get('/feli',function(){
+    return view('feliz');
+});
+
+Route::get('/tris',function(){
+    return view('triste');
+});
+
 

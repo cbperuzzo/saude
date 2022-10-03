@@ -19,9 +19,13 @@ class PessoaDados extends Controller
 
         $imc = $x->imc();
 
-        $dt = explode('|',$imc);
+        $sono = $x->sono();
 
-        return view('out',['imc'=>$dt[0],"tipo"=>$dt[1]]);
+        $sonodt = explode('|',$sono);
+
+        $imcdt = explode('|',$imc);
+
+        return view('out',['imc'=>$imcdt[0],'tipo'=>$imcdt[1],'ideal'=>$sonodt[0],'hds'=>$sonodt[1]]);
 
     }
 }
